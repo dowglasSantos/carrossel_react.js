@@ -1,15 +1,12 @@
-import { useState, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import './App.css'
 
-const App = () => {
-  const [data, setData] = useState([]); 
-  const carrosel = useRef(null);
+import {useFetch} from './hooks/useFetch';
 
-  useEffect(() => {
-    fetch('http://localhost:5173/public/static/shoes.json')
-    .then(resp => resp.json())
-    .then(resp => setData(resp))
-  }, [])
+const App = () => {
+  const carrosel = useRef(null);
+  const {data, loading} = useFetch();
+
 
   const onScrollLeft = (e) => {
     e.preventDefault();
@@ -24,8 +21,8 @@ const App = () => {
   return (
     <div>
       <div className='logo'>
-          <img src='/static/images/super-shoes.png' alt='Super Shoes Logo' />
-        </div>
+        <img src='/static/images/super-shoes.png' alt='Super Shoes Logo' />
+      </div>
       <div className="container" ref={carrosel}>
         {data.map(item => {
           const {id, image, name, oldPrice, price} = item;
