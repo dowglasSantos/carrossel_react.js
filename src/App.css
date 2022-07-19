@@ -1,0 +1,87 @@
+.logo {
+  text-align: left;
+}
+
+.logo img {
+  width: 200px;
+}
+
+.container {
+  width: 75vw;
+  color: #000;
+  text-align: center;
+  overflow-x: auto;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container .item {
+  width: 300px;
+  margin: 20px 10px;
+  border-radius: 16px;
+  background-color: #fff;
+  flex: none;
+}
+
+.container .item .imageItem {
+  width: 100%;
+}
+
+.container .item .imageItem img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.container .item .description {
+  padding: 15px;
+  border-top: 1px solid #000;
+}
+
+.container .item .description span {
+  display: block;
+}
+
+.container .item .description span:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.container .item .description span:nth-of-type(2) {
+  color: red;
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  margin-top: 10px;
+}
+
+.container .item .description span:nth-of-type(3) {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  background-color: #ff4500;
+}
+
+.containerButtons {
+  padding: 20px;
+  text-align: center;
+}
+
+.containerButtons button {
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 1000px;
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+}
+
+.containerButtons button img {
+  width: 20px;
+}
